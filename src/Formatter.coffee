@@ -166,11 +166,13 @@ class Formatter
   # @param {cheerio obj} $content Content of a file
   # @return {cheerio obj} Cheerio object
   ###
-  fixAttachmentWraper: ($content) ->
+  fixAttachmentWrapper: ($content) ->
     $content
       .find('.attachment-buttons').remove().end() # action buttons for attachments
       .find('.plugin_attachments_upload_container').remove().end() # dropbox for uploading new files
       .find('table.attachments.aui').remove().end() # overview table with useless links
+      .find('.pageSection.group .pageSectionHeader').remove().end() # Attachments page section
+      .find('.pageSection.group .greybox').remove().end() # Attachments-related GreyBox page section
 
 
   ###*
