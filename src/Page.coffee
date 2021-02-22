@@ -50,7 +50,7 @@ class Page
     content = @formatter.fixImageWithinSpan content
     content = @formatter.removeArbitraryElements content
     content = @formatter.fixArbitraryClasses content
-    content = @formatter.fixAttachmentWraper content
+    content = @formatter.fixAttachmentWrapper content
     content = @formatter.fixPageLog content
     content = @formatter.fixLocalLinks content, @space, pages
     content = @formatter.addPageHeading content, @heading
